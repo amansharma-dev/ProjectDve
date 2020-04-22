@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ProjectDve</string>
+    <string name="drop_table">DROP TABLE IF EXISTS</string>
 </resources>
