@@ -84,7 +84,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             book.setId(cursor.getInt(cursor.getColumnIndex(DBUtils.COLUMN_ID)));
             book.setBookName(cursor.getString(cursor.getColumnIndex(DBUtils.COLUMN_NAME)));
             book.setAuthorName(cursor.getString(cursor.getColumnIndex(DBUtils.COLUMN_AUTHOR)));
-            book.setBookPrice(cursor.getFloat(cursor.getColumnIndex(DBUtils.COLUMN_PRICE)));
+            book.setBookPrice(cursor.getDouble(cursor.getColumnIndex(DBUtils.COLUMN_PRICE)));
 
             //Get Date & Time
 
@@ -117,7 +117,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 book.setId(cursor.getInt(cursor.getColumnIndex(DBUtils.COLUMN_ID)));
                 book.setBookName(cursor.getString(cursor.getColumnIndex(DBUtils.COLUMN_NAME)));
                 book.setAuthorName(cursor.getString(cursor.getColumnIndex(DBUtils.COLUMN_AUTHOR)));
-                book.setBookPrice(cursor.getFloat(cursor.getColumnIndex(DBUtils.COLUMN_PRICE)));
+                book.setBookPrice(cursor.getDouble(cursor.getColumnIndex(DBUtils.COLUMN_PRICE)));
 
                 DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL);
                 DateFormat timeFormat = DateFormat.getTimeInstance(DateFormat.SHORT);

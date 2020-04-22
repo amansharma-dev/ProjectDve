@@ -4,7 +4,7 @@ public class Book {
     private int id;
     private String bookName;
     private String authorName;
-    private float bookPrice;
+    private double bookPrice;
     private String date;
     private String time;
 
@@ -12,7 +12,13 @@ public class Book {
     public Book() {
     }
 
-    public Book(String bookName, String authorName, float bookPrice, String date, String time) {
+    public Book(String bookName, String authorName, double bookPrice) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.bookPrice = bookPrice;
+    }
+
+    public Book(String bookName, String authorName, double bookPrice, String date, String time) {
         this.bookName = bookName;
         this.authorName = authorName;
         this.bookPrice = bookPrice;
@@ -20,7 +26,7 @@ public class Book {
         this.time = time;
     }
 
-    public Book(int id, String bookName, String authorName, float bookPrice, String date, String time) {
+    public Book(int id, String bookName, String authorName, double bookPrice, String date, String time) {
         this.id = id;
         this.bookName = bookName;
         this.authorName = authorName;
@@ -53,11 +59,11 @@ public class Book {
         this.authorName = authorName;
     }
 
-    public float getBookPrice() {
+    public double getBookPrice() {
         return bookPrice;
     }
 
-    public void setBookPrice(float bookPrice) {
+    public void setBookPrice(double bookPrice) {
         this.bookPrice = bookPrice;
     }
 
