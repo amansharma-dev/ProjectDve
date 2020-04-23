@@ -4,14 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
+import com.example.projectdve.AlertDialog.AddDialog;
 import com.example.projectdve.Data.DatabaseHandler;
 import com.example.projectdve.Model.Book;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private FloatingActionButton floatingActionButton;
+    
     public static final String TAG = "MainActivity";
     private DatabaseHandler databaseHandler;
     @Override
@@ -19,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        floatingActionButton = findViewById(R.id.fab_mainActivity);
+        floatingActionButton.setOnClickListener(this);
+        
 
         //database
         databaseHandler = new DatabaseHandler(MainActivity.this);
@@ -38,5 +47,17 @@ public class MainActivity extends AppCompatActivity {
         //count total entries
         databaseHandler.getCount();
         Log.d(TAG, "onCreate: "+databaseHandler.getCount());
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.fab_mainActivity:
+                AddDialog addDialog = new AddDialog();
+                addDialog.show(getSupportFragmentManager(),"Add Dialog Popup");
+                Log.d(TAG, "onClick: fab main clicked");
+
+                break;
+        }
     }
 }

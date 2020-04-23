@@ -3,4 +3,16 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorBackground">#262530</color>
+    <color name="colorCard">#F2F4F5</color>
+    <color name="colorTitle">#407873</color>
+    <color name="colorButtonBgPositive">#63C2B3</color>
+    <color name="colorButtonBgNegative">#71846E</color>
+    <color name="colorButtonText">#F2F4F5</color>
+    <color name="colorText">#262530</color>
+
+
+
+
+
 </resources>

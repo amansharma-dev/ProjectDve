@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ProjectDve</string>
     <string name="drop_table">DROP TABLE IF EXISTS</string>
+    <string name="book_name">Book Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="price">Price</string>
+    <string name="save">Save</string>
 </resources>
